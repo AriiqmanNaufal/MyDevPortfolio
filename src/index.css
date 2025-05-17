@@ -159,7 +159,7 @@ section {
 }   
 
 .skills-section {
-  padding: 2.5rem 1rem; /* approx py-10 px-4 */
+  padding: 2.5rem 1rem;
 }
 
 .skills-title {
@@ -168,17 +168,31 @@ section {
   font-weight: bold;
   text-align: center;
   margin-bottom: 2.5rem;
-  color: #fef3c7; 
+  color: #fef3c7;
 }
 
 .skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 7rem; /* space between items */
+  overflow: hidden;
+  width: 100%;
+  position: relative;
 }
 
+.slider-container {
+  width: 70rem;        /* Visible window width */
+  overflow: hidden;    /* Hide scroll overflow */
+  align-items: center;
+  margin: 0 auto;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;  /* Wide enough to hold all icons */
+  animation: scroll 25s linear infinite;
+  align-items: center;
+}
 .skill-item {
+  flex: 0 0 auto; /* Prevent shrinking */
+  margin: 0 2rem; /* Add spacing between icons */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -192,12 +206,27 @@ section {
 }
 
 .skill-icon {
-  font-size: 3rem; /* text-5xl approx */
+  font-size: 3rem;
   margin-bottom: 0.5rem;
   color: #FFFFFF;
 }
 
-/* For spinning React icon */
+.skill-name {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  color: white;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* React icon spinning */
 @keyframes spin-slow {
   from {
     transform: rotate(0deg);
@@ -225,3 +254,4 @@ section {
 .social-links a img{
   color: #FFFFFF;
 }
+

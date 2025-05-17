@@ -168,7 +168,7 @@ const Projects: React.FC = () => {
         <a
           href="https://github.com/AriiqmanNaufal"
           target="blank_"
-          style={{ marginLeft: "630px", color: "white", paddingTop: "20px" }}
+          style={{ marginLeft: "630px", color: "white", paddingTop: "50px" }}
         >
           More projects on my Github
         </a>
