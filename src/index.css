@@ -2,17 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');  
 
-body {   
-  font-family: 'Inter', sans-serif;   
-  margin: 0;   
-  padding: 0;   
-  background-size: 100%;
-  background: url('assets/ari.png') ;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  color: #333; 
-}  
+body {
+  background: url('assets/ari.png') no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+}
 
 .navigation {
   background-color: rgba(0, 0, 0, 0.3); /* Match your navbar background */
@@ -178,7 +172,8 @@ section {
 }
 
 .slider-container {
-  width: 70rem;        /* Visible window width */
+  width: 100%;        /* Visible window width */
+  max-width: 70rem;
   overflow: hidden;    /* Hide scroll overflow */
   align-items: center;
   margin: 0 auto;
@@ -420,5 +415,28 @@ section {
     padding: 0.75rem 1rem;
     text-align: center;
   }
+
+  .skills-section {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: Add background to separate visually */
 }
+
+.skills-section {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-section {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section {
+  display: block;
+  padding: 2rem 1rem;
+}
+}
+
 
