@@ -255,3 +255,94 @@ section {
   color: #FFFFFF;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navigation {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 5rem 1rem 2rem;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-top: 6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-button {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .about {
+    padding: 2rem 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title p {
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .slider-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .skill-item {
+    margin: 0 0.5rem;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.75rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+}
+
