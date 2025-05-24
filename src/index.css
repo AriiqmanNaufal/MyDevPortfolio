@@ -3,16 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');  
 
 body {
-<<<<<<< HEAD
   background: black;
   background-size: cover;
   margin: 0;
   padding: 0;
-=======
-  background: url('assets/ari.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll;
->>>>>>> b383354c15cb24a84ddf425b760f5c3960180022
 }
 
 .navigation {
@@ -409,11 +403,7 @@ section {
 
 @media (max-width: 768px) {
   .slider-container {
-<<<<<<< HEAD
     width: 100vw;
-=======
-    width: 100%;
->>>>>>> b383354c15cb24a84ddf425b760f5c3960180022
     padding: 0 1rem;
   }
 
@@ -495,7 +485,6 @@ section {
 }
 }
 
-<<<<<<< HEAD
 .social-links {
   display: flex;
   flex-wrap: wrap;
@@ -505,4 +494,3 @@ section {
 .social-links a {
   margin: 1rem; /* add some margin to prevent overflow */
 }
-
