@@ -2,17 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap'); 
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');  
 
-body {   
-  font-family: 'Inter', sans-serif;   
-  margin: 0;   
-  padding: 0;   
-  background-size: 100%;
-  background: url('assets/ari.png') ;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
-  color: #333; 
-}  
+body {
+  background: black;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
 
 .navigation {
   background-color: rgba(0, 0, 0, 0.3); /* Match your navbar background */
@@ -27,6 +22,22 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: 'ADLaM Display', cursive;
   z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .logo{
@@ -91,52 +102,81 @@ body {
   }
 }
 
-.hero {   
-  padding: 6rem 2rem 4rem;   
-  text-align: center;   
-  color: #fef3c7;   
-  background: url('assets/ariiqq.png') no-repeat center center/cover;   
-  background-attachment: fixed;    
-  font-family: 'ADLaM Display', cursive; 
-  height: 600px;
-}  
+.hero-section {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
-.hero-title {   
-  font-size: 3rem;   
-  margin-bottom: 2rem;
-  margin-top: 9rem ; 
-}  
+.hero-container {
+  display: flex;
+  height: 100%;
+}
 
+.hero-left {
+  flex: 1;
+  padding: 6rem 3rem;
+  color: #fef3c7;
+  font-family: 'ADLaM Display', cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-.hero-subtitle {   
-  font-size: 1.5rem;   
-  font-family: 'ADLaM Display', cursive;   
-  margin-bottom: 2rem;   
-  color: #f5f5f5; 
-}  
+.hero-right {
+  flex: 1;
+  background-image: url('assets/ariiqcutt.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-.hero-button {   
-  display: inline-block;   
-  padding: 0.75rem 1.5rem;   
-  margin-right: 3rem;   
-  border-color: #A39D7D;
-  border-radius: 5px;
-  background-color: black;   
-  color: white;   
-  font-weight: bold;   
-  text-decoration: none;   
-  transition: background-color 0.3s ease; 
-}  
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
 
-.hero-button:hover {   
-  background-color: #303112; 
-}  
+.hero-button {
+  background-color: #fef3c7;
+  color: #1f2937;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #fde68a;
+}
+
+.hero-social-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  color: white;
+}
+
+.highlight {
+  color: #facc15; /* bright yellow for highlight */
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+
+  .hero-right {
+    height: 300px;
+  }
+}
 
 .about {
-  background: url('assets/ariiiq.png') no-repeat center center/cover;
+  
   background-blend-mode: darken;
-  box-shadow: inset 0 50px 50px -50px rgba(0, 0, 0, 5);
-  background-attachment: fixed;    
+  box-shadow: inset 0 50px 50px -50px rgba(0, 0, 0, 10);
   padding: 4rem 2rem 4rem;   
   text-align: center;   
   background-repeat: no-repeat;
@@ -178,7 +218,8 @@ section {
 }
 
 .slider-container {
-  width: 70rem;        /* Visible window width */
+  width: 100%;        /* Visible window width */
+  max-width: 70rem;
   overflow: hidden;    /* Hide scroll overflow */
   align-items: center;
   margin: 0 auto;
@@ -255,3 +296,201 @@ section {
   color: #FFFFFF;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .navigation {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin: 0 auto;
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 5rem 1rem 2rem;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-top: 6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-button {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+  }
+
+  .about {
+    padding: 2rem 1rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title p {
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .slider-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .skill-item {
+    margin: 0 0.5rem;
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.75rem;
+  }
+
+  .social-links {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .social-links {
+    flex-direction: column;
+    row-gap: 1rem;
+    column-gap: 0; /* remove horizontal spacing for small screens */
+    padding: 1rem 0;
+  }
+
+  .social-links a {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    width: 100vw;
+    padding: 0 1rem;
+  }
+
+  .slider-track {
+    gap: 1.5rem;
+  }
+
+  .skill-item {
+    margin: 0 1rem;
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+  }
+
+  .skill-name {
+    font-size: 0.75rem;
+  }
+
+  .skills-title {
+    font-size: 1.75rem;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-items {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-items.open {
+    display: flex;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: center;
+  }
+
+  .skills-section {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: Add background to separate visually */
+}
+
+.skills-section {
+  position: relative;
+  z-index: 1;
+}
+
+.projects-section {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section {
+  display: block;
+  padding: 2rem 1rem;
+}
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links a {
+  margin: 1rem; /* add some margin to prevent overflow */
+}
